@@ -1,0 +1,45 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment variables & Secrets (避免误提交 API Key)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Agent / LLM runtime data & cache
+.agents/
+.chainlit/
+logs/
+*.log
+# 本地向量库与持久化存储
+*.sqlite
+*.sqlite3
+chroma_db/
+vector_store/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
