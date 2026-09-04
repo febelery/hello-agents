@@ -5,4 +5,12 @@ description = "用于学习 AI Agent 开发基础与实践的 Python 项目"
 readme = "README.md"
 authors = [{ name = "febel", email = "ross@ross" }]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "dotenv>=0.9.9",
+    "openai>=3.8.0",
+    "requests>=2.34.2",
+    "tavily-python>=0.8.1",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.16.6"]
