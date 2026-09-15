@@ -9,6 +9,8 @@ dependencies = [
     "dotenv>=0.9.9",
     "openai>=3.8.0",
     "requests>=2.34.2",
+    "rich>=15.0.0",
+    "serpapi>=1.1.1",
     "tavily-python>=0.8.1",
     "torch>=2.14.0",
 ]
