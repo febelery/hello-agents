@@ -10,6 +10,7 @@ dependencies = [
     "openai>=3.8.0",
     "requests>=2.34.2",
     "tavily-python>=0.8.1",
+    "torch>=2.14.0",
 ]
 
 [dependency-groups]
