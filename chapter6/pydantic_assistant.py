@@ -15,6 +15,8 @@ from typing import Literal
 
 import logfire
 from dotenv import load_dotenv
+from prompt_toolkit import PromptSession
+from prompt_toolkit.history import InMemoryHistory
 from pydantic import BaseModel, Field
 from pydantic_ai import Agent, ModelRetry, RunContext
 from pydantic_ai.messages import ModelMessage
@@ -131,9 +133,14 @@ async def main():
 
     # 用一个列表保存历史消息，实现多轮对话记忆
     message_history: list[ModelMessage] = []
+    session = PromptSession(history=InMemoryHistory())
 
     while True:
-        user_input = input("🤔 您想了解什么: ").strip()
+        try:
+            user_input = (await session.prompt_async("🤔 您想了解什么: ")).strip()
+        except (KeyboardInterrupt, EOFError):
+            print("感谢使用！再见！👋")
+            break
 
         if user_input.lower() in ["quit", "q", "exit", "退出"]:
             print("感谢使用！再见！👋")

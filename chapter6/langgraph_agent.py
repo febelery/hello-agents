@@ -15,6 +15,8 @@ from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
+from prompt_toolkit import PromptSession
+from prompt_toolkit.history import InMemoryHistory
 from tavily import TavilyClient
 
 load_dotenv()
@@ -203,9 +205,14 @@ async def main():
     print("(输入 'quit' 退出)\n")
 
     session_count = 0
+    session = PromptSession(history=InMemoryHistory())
 
     while True:
-        user_input = input("🤔 您想了解什么: ").strip()
+        try:
+            user_input = (await session.prompt_async("🤔 您想了解什么: ")).strip()
+        except (KeyboardInterrupt, EOFError):
+            print("感谢使用！再见！👋")
+            break
 
         if user_input.lower() in ["quit", "q", "exit", "退出"]:
             print("感谢使用！再见！👋")
