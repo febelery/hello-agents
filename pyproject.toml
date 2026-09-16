@@ -7,6 +7,8 @@ authors = [{ name = "febel", email = "ross@ross" }]
 requires-python = ">=3.12"
 dependencies = [
     "dotenv>=0.9.9",
+    "langchain-openai>=1.6.2",
+    "langgraph>=1.2.11",
     "openai>=3.8.0",
     "requests>=2.34.2",
     "rich>=15.0.0",
