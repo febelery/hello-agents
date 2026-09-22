@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "awesome-jev": {
+      "source": "logicrw/awesome-jev-projects",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "1e07539d65c0d6e8d8cd768377e8cfe1ad7f26c8de9877e8bf43c90ef0b032b7"
+    },
+    "python-design-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/python-development/skills/python-design-patterns/SKILL.md",
+      "computedHash": "e9340dc302515d844fb5c4d6a14da72bed62ef50ab8b56540dd80a1a22a3c059"
+    },
+    "typesafe-ai": {
+      "source": "typesafe-ai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/typesafe-ai/SKILL.md",
+      "computedHash": "9cd84c5e535dec8dec59917c110f9c00b4a61faadb86b432ec7e41051170af12"
+    }
+  }
+}
